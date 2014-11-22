@@ -1,0 +1,8 @@
+{
+  "jspm": {
+    "name": "forserial.org",
+    "directories": {
+      "packages": "packages"
+    }
+  }
+}
