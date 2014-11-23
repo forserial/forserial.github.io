@@ -37,6 +37,7 @@
   var distortion = audioCtx.createWaveShaper();
   var gainNode = audioCtx.createGain();
   var biquadFilter = audioCtx.createBiquadFilter();
+  var freqOutput = document.querySelector('.freq');
   
   // distortion curve for the waveshaper, thanks to Kevin Ennis
   // http://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion
@@ -176,8 +177,7 @@
   
         for(var i = 0; i < bufferLength; i++) {
           barHeight = dataArray[i];
-          console.log(getFrequencyValue(audioCtx, i), dataArray[i]);
-  
+          freqOutput.innerHTML = getFrequencyValue(dataArray[i], dataArray, audioCtx);
           canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
           canvasCtx.fillRect(x,HEIGHT-barHeight/2,barWidth,barHeight/2);
   
@@ -240,7 +240,7 @@
     }
   }
   
-  function getFrequencyValue(context, frequency) {
+  function getFrequencyValue(frequency, freqDomain, context) {
     var nyquist = context.sampleRate/2;
     var index = Math.round(frequency/nyquist * freqDomain.length);
     return freqDomain[index];

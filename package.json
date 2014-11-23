@@ -3,6 +3,10 @@
     "name": "forserial.org",
     "directories": {
       "packages": "packages"
+    },
+    "dependencies": {
+      "github:julianshapiro/blast": "^1.1.1",
+      "jquery": "^2.1.1"
     }
   }
 }

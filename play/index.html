@@ -7,43 +7,54 @@
   <link href='http://fonts.googleapis.com/css?family=Rokkitt|Coustard|Sorts+Mill+Goudy|Copse|Cutive|IM+Fell+DW+Pica+SC|VT323|Cutive+Mono' rel='stylesheet' type='text/css'>
   <style>
     body {
-      font-family: 'Cutive', serif;
+      font-family: 'Cutive Mono', serif;
       background-color: #272822;
       color: #d0d0d0;
-      transform: scale(4);
-      font-size: 0.5em;
-      width: 960px;
-    }
-
-    .hero, .subscript {
+      width: 100%;
       text-align: center;
     }
 
+    body>div,body>ul {
+      width: 100%;
+    }
+
     .hero {
-      margin-top: 25%;
-      font-size: 27px;
+      font-size: 12em;
+    }
+
+    ul {
+      -webkit-padding-start: 0;
+      -moz-padding-start: 0;
+      list-style-type: none;
+    }
+    
+    ul>li::before {
+      content: '- ';
+    }
+    
+    ul>li::after {
+      content: ' -';
+    }
+
+    .copy {
+      color: #75715e;
+      margin: 0;
+    }
+
+    .shadow {
+      text-shadow: #757575 0 0 6px;
     }
     
     .subscript {
-      font-family: 'Cutive Mono', serif;
-    }
-    
-    .copy {
-      font-family: 'Cutive Mono', serif;
-      font-size: 0.5em;
-      color: #75715e;
-      text-align: none;
-    }
-    
-    .shadow {
-      text-shadow: #757575 0 0 6px;
+      font-style: italic;
+      font-size: 2em;
     }
   </style>
 </head>
 <body>
 <div class="hero shadow">forserial.org</div>
-<div class="subscript">it's time to get serial</div>
-<ul class="subscript copy">
+<div class="subscript">it's time to get serial.</div>
+<ul class="copy">
   <li>Use WebAudio API + gumby toggles/switches</li>
   <li>define CSS "keys", "staffs", etc.</li>
   <li>respond to rhythm somehow?</li>
