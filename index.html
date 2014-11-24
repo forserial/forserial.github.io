@@ -6,7 +6,7 @@
   <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Rokkitt|Coustard|Sorts+Mill+Goudy|Copse|Cutive|IM+Fell+DW+Pica+SC|VT323|Cutive+Mono' rel='stylesheet' type='text/css'>
   
-  <script src="packages/system.js"></script>
+  <script src="jspm_packages/system.js"></script>
   <script src="config.js"></script>
   <script>
     System.import('main');
@@ -119,5 +119,17 @@
     <li>respond to rhythm somehow?</li>
   </ul>
 </div> <!-- hero -->
+<script>
+System.amdRequire(['webaudiox/build/webaudiox'], function (WebAudiox) {
+  var context = new AudioContext(),
+      lineOut = new WebAudiox.LineOut(), 
+      analyser = context.createAnalyser();
+  
+  analyser.connect(lineOut.destination);
+  lineOut.destination = analyser;
+  
+  console.log("Loaded up!");
+});
+</script>
 </body>
 </html>

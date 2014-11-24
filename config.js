@@ -7,9 +7,11 @@ System.config({
 
 System.config({
   "map": {
+    "blast": "github:julianshapiro/blast@^1.1.1",
     "github:julianshapiro/blast": "github:julianshapiro/blast@^1.1.1",
     "github:rzyns/webaudiox": "github:rzyns/webaudiox@master",
-    "jquery": "github:components/jquery@^2.1.1"
+    "jquery": "github:components/jquery@^2.1.1",
+    "webaudiox": "github:rzyns/webaudiox@master"
   }
 });
 

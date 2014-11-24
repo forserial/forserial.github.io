@@ -2,13 +2,12 @@
   "jspm": {
     "name": "forserial.org",
     "main": "app",
-    "directories": {
-      "packages": "packages"
-    },
     "dependencies": {
+      "blast": "github:julianshapiro/blast@^1.1.1",
       "github:julianshapiro/blast": "^1.1.1",
       "github:rzyns/webaudiox": "master",
-      "jquery": "^2.1.1"
+      "jquery": "^2.1.1",
+      "webaudiox": "github:rzyns/webaudiox@master"
     }
   }
 }
