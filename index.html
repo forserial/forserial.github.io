@@ -5,33 +5,60 @@
   <meta charset="utf-8">
   <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Rokkitt|Coustard|Sorts+Mill+Goudy|Copse|Cutive|IM+Fell+DW+Pica+SC|VT323|Cutive+Mono' rel='stylesheet' type='text/css'>
+  
+  <script src="packages/system.js"></script>
+  <script src="config.js"></script>
+  <script>
+    System.import('main');
+  </script>
   <style>
     body {
       font-family: 'Cutive Mono', serif;
       background-color: #272822;
       color: #d0d0d0;
-      width: 100%;
+      width: 100vw;
+      height: 100vh;
       text-align: center;
+      vertical-align: middle;
+      box-sizing: border-box;
+    }
+    body span {
+      display: inline-block;
     }
 
     body>div,body>ul {
       width: 100%;
     }
 
+    header {
+      font-size: 10em;
+      font-weight: bold;
+    }
+
     .hero {
-      font-size: 12em;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .dark {
+      color: #75715E;
+    }
+    .enclose {
+      filter: blur(2px);
     }
 
     ul {
+      padding-start: 0;
       -webkit-padding-start: 0;
       -moz-padding-start: 0;
       list-style-type: none;
     }
-    
+
     ul>li::before {
       content: '- ';
     }
-    
+
     ul>li::after {
       content: ' -';
     }
@@ -44,20 +71,53 @@
     .shadow {
       text-shadow: #757575 0 0 6px;
     }
-    
+
     .subscript {
       font-style: italic;
       font-size: 2em;
     }
+
+    .animate .shadow {
+      animation: defocus 1s ease-in-out 0s 10 alternate;
+    }
+
+    @keyframes defocus {
+      from {
+        filter: blur(0px);
+      }
+
+      to {
+        filter: blur(4px);
+      }
+    }
+
+    .transition {
+      transition: 1s transform ease-out;
+    }
+    
+    .dark-enclose::before {
+      content: '<';
+      color: #75715e;
+      filter: blur(3px);
+    }
+    .dark-enclose::after {
+      content: '/>';
+      color: #75715e;
+      filter: blur(3px);
+    }
+
   </style>
 </head>
 <body>
-<div class="hero shadow">forserial.org</div>
-<div class="subscript">it's time to get serial.</div>
-<ul class="copy">
-  <li>Use WebAudio API + gumby toggles/switches</li>
-  <li>define CSS "keys", "staffs", etc.</li>
-  <li>respond to rhythm somehow?</li>
-</ul>
+
+<div class="hero transition">
+  <header class="shadow dark-enclose">forserial</header>
+  <div class="subscript">it's time to get serial.</div>
+  <ul class="copy">
+    <li>Use WebAudio API + gumby toggles/switches</li>
+    <li>define CSS "keys", "staffs", etc.</li>
+    <li>respond to rhythm somehow?</li>
+  </ul>
+</div> <!-- hero -->
 </body>
 </html>
