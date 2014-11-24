@@ -8,6 +8,7 @@ System.config({
 System.config({
   "map": {
     "github:julianshapiro/blast": "github:julianshapiro/blast@^1.1.1",
+    "github:rzyns/webaudiox": "github:rzyns/webaudiox@master",
     "jquery": "github:components/jquery@^2.1.1"
   }
 });
@@ -15,7 +16,8 @@ System.config({
 System.config({
   "versions": {
     "github:components/jquery": "2.1.1",
-    "github:julianshapiro/blast": "1.1.1"
+    "github:julianshapiro/blast": "1.1.1",
+    "github:rzyns/webaudiox": "master"
   }
 });
 
