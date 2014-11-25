@@ -1,18 +1,7 @@
 var $     = require('jquery'),
     blast = require('blast/jquery.blast');
-    // WebAudiox = require('webaudiox/build/webaudiox'),
-  
-
-analyser.connect(lineOut.destination);
-lineOut.destination = analyser;
-
 
 var url = 'techno.mp3';
-
-require(['blast/jquery.blast'], function (blast) {
-  alert('wtf');
-  console.log(blast);
-});
 
 $(document).ready(function () {
 

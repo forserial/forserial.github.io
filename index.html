@@ -8,8 +8,6 @@
   
   <script src="jspm_packages/system.js"></script>
   <script src="config.js"></script>
-  <script src="build.js"></script>
-  <script src="jspm_packages/github/rzyns/webaudiox@master/build/webaudiox.js"></script>
   <script>
     System.import('main');
   </script>
@@ -122,13 +120,6 @@
   </ul>
 </div> <!-- hero -->
 <script>
-  var context = new AudioContext(),
-      lineOut = new WebAudiox.LineOut(), 
-      analyser = context.createAnalyser();
-  
-  analyser.connect(lineOut.destination);
-  lineOut.destination = analyser;
-  
   console.log("Loaded up!");
 </script>
 </body>
