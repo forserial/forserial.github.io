@@ -8,6 +8,8 @@
   
   <script src="jspm_packages/system.js"></script>
   <script src="config.js"></script>
+  <script src="build.js"></script>
+  <script src="jspm_packages/github/rzyns/webaudiox@master/build/webaudiox.js"></script>
   <script>
     System.import('main');
   </script>
@@ -120,7 +122,6 @@
   </ul>
 </div> <!-- hero -->
 <script>
-System.amdRequire(['webaudiox/build/webaudiox'], function (WebAudiox) {
   var context = new AudioContext(),
       lineOut = new WebAudiox.LineOut(), 
       analyser = context.createAnalyser();
@@ -129,7 +130,6 @@ System.amdRequire(['webaudiox/build/webaudiox'], function (WebAudiox) {
   lineOut.destination = analyser;
   
   console.log("Loaded up!");
-});
 </script>
 </body>
 </html>
