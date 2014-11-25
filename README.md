@@ -1,4 +1,5 @@
 # Welcome to your new Koding workspace
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/forserial/forserial.github.io?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 This workspace, which lives inside the 'Workspaces' folder of your
 home directory, is the place where you can store all relevant and
