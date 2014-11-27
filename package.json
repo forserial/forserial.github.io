@@ -5,9 +5,10 @@
     "dependencies": {
       "blast": "github:julianshapiro/blast@^1.1.1",
       "github:julianshapiro/blast": "^1.1.1",
-      "github:rzyns/webaudiox": "master",
+      "github:rzyns/consonance": "master",
+      "github:rzyns/webaudiox": "jspm",
       "jquery": "^2.1.1",
-      "webaudiox": "github:rzyns/webaudiox@master"
+      "webaudiox": "github:rzyns/webaudiox@jspm"
     }
   }
 }

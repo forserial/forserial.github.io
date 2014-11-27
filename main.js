@@ -30,8 +30,6 @@ $(document).ready(function () {
     var easing = ['ease-in', 'ease-out', 'ease-in-out', 'linear'];
     return rand(0, 2, true) + 's all ' + easing[rand(0, easing.length)];
   }
-  
-  $('.subscript, .copy').blast({delimiter: "character"});
 
   function dismantle() {
     $('.blast').each(function (i, el) {
@@ -50,6 +48,7 @@ $(document).ready(function () {
   }
 
   
+  $('.subscript, .copy').blast({delimiter: "word"});
   $('header').blast({
     delimiter: 'character',
     generateValueClass: true
