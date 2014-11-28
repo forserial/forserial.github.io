@@ -99,11 +99,20 @@ ul {
   }
 }
 
+.foo::after {
+  content: 'yourmom';
+  transition: all 1s;
+}
+
+.foo.face::after {
+  content: 'mymom';
+}
+
 .foo,.blast-character-r {
   animation: rotate 3s linear 0s;
 }
 .copy .blast[style], .subscript .blast[style] {
-  transition: all 1s;
+  transition: content 15s;
 }
 
 @keyframes rotate {
