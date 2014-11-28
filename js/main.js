@@ -1,6 +1,5 @@
-require(['jquery', 'consonance', 'less', 'jquery.blast', 'less!styles/forserial'], function ($, consonance, less, blast) {
-  console.log($, consonance, less);
-$(document).ready(function () {
+require(['jquery', 'consonance', 'less', 'jquery.blast', 'less!styles/forserial'],
+    function ($, consonance, less, blast) {
 
   function id(i) {
     return i;
@@ -56,5 +55,17 @@ $(document).ready(function () {
   $('.copy .blast, .subscript .blast').mouseenter(function () {
     $(this).removeAttr('style');
   });
-});
-});
+
+  var iid = setInterval(function () {
+    var dismantled = $('.copy .blast[style], .subscript .blast[style]'),
+        index = Math.floor(Math.random() * (dismantled.length -1)),
+        $el = $(dismantled[index]),
+        style = $el.length && $el.get(0).style || [];
+
+    if ($el.length) {
+        $el.css({'transform': 'none'});
+        style.color = null;
+    }
+  }, 900);
+
+}); // define()
