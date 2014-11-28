@@ -1,8 +1,5 @@
-var $     = require('jquery'),
-    blast = require('blast/jquery.blast');
-
-var url = 'techno.mp3';
-
+require(['jquery', 'consonance', 'less', 'jquery.blast', 'less!styles/forserial'], function ($, consonance, less, blast) {
+  console.log($, consonance, less);
 $(document).ready(function () {
 
   function id(i) {
@@ -21,11 +18,11 @@ $(document).ready(function () {
       return rand(0, 255);
     }).join(',') + (alpha && (',' + rand(0, 1, true))) + ')';
   }
-  
+
   function tr() {
     return 'rotate(' + rand(0, 90, false, true) + 'deg)';
   }
-  
+
   function trr() {
     var easing = ['ease-in', 'ease-out', 'ease-in-out', 'linear'];
     return rand(0, 2, true) + 's all ' + easing[rand(0, easing.length)];
@@ -40,14 +37,14 @@ $(document).ready(function () {
       });
     });
   }
-  
+
   function remantle () {
     $('.blast').each(function () {
       $(this).removeAttr('style');
     });
   }
 
-  
+
   $('.subscript, .copy').blast({delimiter: "word"});
   $('header').blast({
     delimiter: 'character',
@@ -59,4 +56,5 @@ $(document).ready(function () {
   $('.copy .blast, .subscript .blast').mouseenter(function () {
     $(this).removeAttr('style');
   });
+});
 });
