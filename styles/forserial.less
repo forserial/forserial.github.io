@@ -1,0 +1,125 @@
+body {
+  display: block;
+  font-family: 'Cutive Mono', serif;
+  background-color: #272822;
+  color: #d0d0d0;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+
+  span {
+    display: inline-block;
+  }
+
+  &>div, &>ul {
+    width: 100%;
+  }
+}
+
+header {
+  font-size: 10em;
+  font-weight: bold;
+}
+
+.hero {
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dark {
+  color: #75715E;
+}
+.enclose {
+  filter: blur(2px);
+}
+
+ul {
+  padding-start: 0;
+  -webkit-padding-start: 0;
+  -moz-padding-start: 0;
+  list-style-type: none;
+
+  &>li::before {
+    content: '- ';
+  }
+
+  &>li::after {
+    content: ' -';
+  }
+}
+
+.copy {
+  color: #75715e;
+  margin: 0;
+}
+
+.shadow {
+  text-shadow: #757575 0 0 6px;
+}
+
+.subscript {
+  font-style: italic;
+  font-size: 2em;
+}
+
+.animate {
+  .shadow {
+    animation: defocus 1s ease-in-out 0s 10 alternate;
+  }
+}
+
+@keyframes defocus {
+  from {
+    filter: blur(0px);
+  }
+
+  to {
+    filter: blur(4px);
+  }
+}
+
+.transition {
+  transition: 1s transform ease-out;
+}
+
+.dark-enclose {
+  &::before {
+    content: '<';
+    color: #75715e;
+    filter: blur(3px);
+  }
+  &::after {
+    content: '/>';
+    color: #75715e;
+    filter: blur(3px);
+  }
+}
+
+.foo::after {
+  content: 'yourmom';
+  transition: all 1s;
+}
+
+.foo.face::after {
+  content: '';
+}
+
+.foo,.blast-character-r {
+  animation: rotate 3s linear 0s;
+}
+.copy .blast[style], .subscript .blast[style] {
+  transition: content 15s;
+}
+
+@keyframes rotate {
+  from {
+  }
+
+  to {
+    transform: rotate3d(0.01, 1, 0, 360deg);
+  }
+}
