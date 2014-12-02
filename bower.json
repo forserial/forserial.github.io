@@ -24,7 +24,8 @@
     "midnight.js": "~1.0.4",
     "consonance": "*",
     "requirejs": "~2.1.15",
-    "require-less": "~0.1.5"
+    "require-less": "~0.1.5",
+    "svg.js": "~1.0.1"
   },
   "moduleType": [
     "globals"

@@ -1,5 +1,7 @@
-require(['jquery', 'consonance', 'less', 'jquery.blast', 'less!styles/forserial'],
+require(['jquery', 'consonance', 'less', 'jquery.blast', 'svg','less!styles/forserial'],
     function($, consonance, less, blast) {
+
+        console.log('svg');
 
         function id(i) {
             return i;
@@ -94,6 +96,5 @@ require(['jquery', 'consonance', 'less', 'jquery.blast', 'less!styles/forserial'
         var tid = setTimeout(function () {
             $('.foo').addClass('face');
         }, 5000);
-
 
     }); // require()
