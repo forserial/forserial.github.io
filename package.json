@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/forserial/forserial.github.io/issues"
   },
-  "homepage": "https://github.com/forserial/forserial.github.io"
+  "homepage": "https://github.com/forserial/forserial.github.io",
 
   "private": true,
   "engines": {
