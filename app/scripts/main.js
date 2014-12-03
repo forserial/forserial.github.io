@@ -77,22 +77,24 @@
         }
 
 
-        dismantled($('.subscript, .copy').blast({
-            delimiter: 'word',
-            returnGenerated: true
-        }));
-        $('header').blast({
-            delimiter: 'character',
-            generateValueClass: true
-        });
+        $(document).ready(function () {
+            dismantled($('.subscript, .copy').blast({
+                delimiter: 'word',
+                returnGenerated: true
+            }));
+            $('header').blast({
+                delimiter: 'character',
+                generateValueClass: true
+            });
 
-        $('.blast-character-e').click(dismantle);
-        $('.blast-character-f').click(remantle);
-        $('.copy .blast, .subscript .blast').mouseenter(function() {
-            $(this).removeAttr('style');
-        });
+            $('.blast-character-e').click(dismantle);
+            $('.blast-character-f').click(remantle);
+            $('.copy .blast, .subscript .blast').mouseenter(function() {
+                $(this).removeAttr('style');
+            });
 
-        setTimeout(function () {
-            $('.foo').addClass('face');
-        }, 5000);
-}());
+            setTimeout(function () {
+                $('.foo').addClass('face');
+            }, 5000);
+        });
+});
