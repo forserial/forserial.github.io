@@ -1,58 +1,36 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <title>forserial.org - get serial</title>
-  <meta charset="utf-8">
-  <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Rokkitt|Coustard|Sorts+Mill+Goudy|Copse|Cutive|IM+Fell+DW+Pica+SC|VT323|Cutive+Mono' rel='stylesheet' type='text/css'>
-
-  <!-- <link rel="stylesheet/less" type="text/css" href="styles/forserial.less"/> -->
-
-  <script src="bower_components/requirejs/require.js"></script>
-  <script>
-    require.config({
-      baseUrl: '/',
-      paths: {
-        'jquery': 'bower_components/jquery/dist/jquery',
-        'jquery.blast': 'bower_components/blast-text/jquery.blast',
-        'consonance_core': 'bower_components/consonance/lib/consonance-core',
-        'consonance': 'bower_components/consonance/lib/consonance',
-        'less': 'bower_components/less.js/dist/less'
-      },
-      map: {
-        "*": {
-          less: 'bower_components/require-less/less',
-          'consonance-core': 'bower_components/consonance/lib/consonance-core'
-        }
-      },
-      shim: {
-        'jquery.blast': ['jquery'],
-        'exports': 'jQuery.blast'
-      }
-    });
-  </script>
-  <script src="js/main.js"></script>
-  <style>
+<!doctype html> <html lang=en> <head> <title>forserial.org - get serial</title> <meta charset=utf-8> <link href="http://fonts.googleapis.com/css?family=Slabo+27px" rel=stylesheet type=text/css> <link href="http://fonts.googleapis.com/css?family=Rokkitt|Coustard|Sorts+Mill+Goudy|Copse|Cutive|IM+Fell+DW+Pica+SC|VT323|Cutive+Mono" rel=stylesheet type=text/css> <script src=scripts/vendor.js></script> <link rel=stylesheet href=styles/main.css> <style>
     body {
       background-color: #272822;
     }
-    .hero {
-      display: none;
+  </style> </head> <body> <div class="hero transition"> <header class="shadow dark-enclose">forserial</header> <div class=subscript>it's time to get serial.</div> <ul class=copy> <li>Use WebAudio API + gumby toggles/switches</li> <li>define CSS "keys", "staffs", etc.</li> <li>respond to rhythm somehow?</li> </ul> <div class=logo>  </div> </div>  <style>
+    .turnBoxButton {
+      display: inline-block;
+      text-align: center;
+      cursor: pointer;
     }
-  </style>
-</head>
-<body>
+    .turnBoxFace {
+      background-color: #272822;
+    }
+    .turnBoxFaceNum1 {
+      background-color: #EFC090;
+    }
+    .turnBoxCurrentFace1 > .turnBoxFaceNum1 {
+      background-color: #2a2a2a;
+    }
+    .turnBoxCurrentFace1 > .turnBoxFaceNum1:hover {
+      background-color: #222222;
+    }
+    .turnBoxFaceNum2 {
+      background-color: #0087b7;
+    }
 
-<div class="hero transition">
-  <header class="shadow dark-enclose">forserial</header>
-  <div class="subscript">it's time to get serial.</div>
-  <ul class="copy">
-    <li>Use WebAudio API + gumby toggles/switches</li>
-    <li>define CSS "keys", "staffs", etc.</li>
-    <li>respond to rhythm somehow?</li>
-  </ul>
-  <div class="foo"></div>
-</div> <!-- hero -->
-
-</body>
-</html>
+    .turnBoxCurrentFace2 > .turnBoxFaceNum2 {
+      background-color: #00adea;
+    }
+    .turnBoxCurrentFace2 > .turnBoxFaceNum2:hover {
+      background-color: #00a2db;
+    }
+    .turnBoxContainer {
+      display: inline-block;
+    }
+</style> <div class=sample> <div> <p class="turnBoxButton turnBoxButtonEventMouseover">Main Face</p> </div> <div> <span class="turnBoxButton turnBoxButtonEventMouseover">This is a button</span> </div> <div> <span class="turnBoxButton turnBoxButtonEventMouseover turnBoxButtonEventTouchstart">NEXT</span> </div> <div> <span class="turnBoxButton turnBoxButtonEventMouseover">skip to 3</span> </div> </div> <script>$('.sample').turnBox();</script> <script src=scripts/main.js></script> </body> </html> 
