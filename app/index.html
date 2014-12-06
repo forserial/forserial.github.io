@@ -21,6 +21,7 @@
   <script src="../bower_components/consonance/lib/consonance.js"></script>
   <script src="../bower_components/svg.js/dist/svg.js"></script>
   <!-- endbower -->
+  <script src="scripts/turnBox.js"></script>
   <!-- endbuild -->
 
 
@@ -46,11 +47,59 @@
   </ul>
 
 <div class="logo">
-<link rel="import" href="assets/melontech-color.svg">
+<!-- <link rel="import" href="assets/melontech-color.svg"> -->
 </div>
 </div> <!-- hero -->
 
-<!-- build:js scripts/vendor.js -->
+<style>
+    .turnBoxButton {
+      display: inline-block;
+      text-align: center;
+      cursor: pointer;
+    }
+    .turnBoxFace {
+      background-color: #272822;
+    }
+    .turnBoxFaceNum1 {
+      background-color: #EFC090;
+    }
+    .turnBoxCurrentFace1 > .turnBoxFaceNum1 {
+      background-color: #2a2a2a;
+    }
+    .turnBoxCurrentFace1 > .turnBoxFaceNum1:hover {
+      background-color: #222222;
+    }
+    .turnBoxFaceNum2 {
+      background-color: #0087b7;
+    }
+
+    .turnBoxCurrentFace2 > .turnBoxFaceNum2 {
+      background-color: #00adea;
+    }
+    .turnBoxCurrentFace2 > .turnBoxFaceNum2:hover {
+      background-color: #00a2db;
+    }
+    .turnBoxContainer {
+      display: inline-block;
+    }
+</style>
+<div class="sample">
+  <div>
+    <p class="turnBoxButton turnBoxButtonEventMouseover">Main Face</p>
+  </div>
+  <div>
+    <span class="turnBoxButton turnBoxButtonEventMouseover">This is a button</span>
+  </div>
+  <div>
+    <span class="turnBoxButton turnBoxButtonEventMouseover turnBoxButtonEventTouchstart">NEXT</span>
+  </div>
+  <div>
+    <span class="turnBoxButton turnBoxButtonEventMouseover">skip to 3</span>
+  </div>
+</div>
+<script>$('.sample').turnBox();</script>
+
+<!-- build:js scripts/main.js -->
 <script src="scripts/main.js"></script>
 <!-- endbuild -->
 </body>
